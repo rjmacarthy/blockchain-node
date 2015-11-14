@@ -17,7 +17,7 @@ API documentation : https://blockchain.info/api/json_rpc_api
 **Require blockchain-node**
 
 ```
-  var bitpos = require('blockchain-node');
+  var blockchain = require('blockchain-node');
 ```
 
 **Instantiate**
