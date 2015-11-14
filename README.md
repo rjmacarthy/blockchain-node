@@ -65,9 +65,9 @@ getTransaction => (txid : string, callback : function)
 
 ** UNTESTED **
 
-sendFrom => (to : string, from : string, amount : number, callback)
+sendFrom => (to : string, from : string, amount : number, callback : function)
 
-move => (to : string, from : string, amount : number, callback)
+move => (to : string, from : string, amount : number, callback : function)
 
 ## Tests
 
