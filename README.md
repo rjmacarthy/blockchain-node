@@ -1,5 +1,5 @@
 
-# bitpos-node
+# blockchain-node
 
 Blockchain.info Bitcoin Wrapper For Node.js
 
