@@ -1,6 +1,6 @@
 {
   "name": "blockchain-node",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Blockchain.info Node.js Wrapper",
   "main": "index.js",
   "scripts": {
