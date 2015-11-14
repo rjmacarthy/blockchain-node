@@ -60,7 +60,7 @@ describe('blockchain suite', function() {
 
     it('should be able to validate an address', function(done) {
         bc.validateAddress('13VJhb7gs5LiWmXsDR7ja4i8Bu2Yeoyb4E', function(err, response) {
-            expect(response.valiation).toBeDefined();
+            expect(response.validation).toBeDefined();
             done();
         });
     });

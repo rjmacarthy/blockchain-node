@@ -116,12 +116,12 @@ Blockchain.prototype.listTransactions = function(callback) {
 Blockchain.prototype.validateAddress = function(address, callback) {
     var self = this;
     if (address) {
-        self.client.validateAddress(address, function(err, valiation) {
+        self.client.validateAddress(address, function(err, validation) {
             if (err) {
                 self.HandleError(err, callback);
             } else {
                 callback(null, {
-                    valiation: valiation
+                    validation: validation
                 });
             }
         });
