@@ -63,7 +63,7 @@ validateAddress => (address : string, callback : function)
 
 getTransaction => (txid : string, callback : function)
 
-** UNTESTED **
+**UNTESTED**
 
 sendFrom => (to : string, from : string, amount : number, callback : function)
 
