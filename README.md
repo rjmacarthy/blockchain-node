@@ -60,3 +60,7 @@ Website : www.cryptogrind.com
 ## Release History
 
 * 1.0.0 Initial release
+
+## Issues
+
+Contact me via e-mail
