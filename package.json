@@ -1,0 +1,16 @@
+{
+  "name": "blockchain-node",
+  "version": "1.0.0",
+  "description": "Blockchain.info Node.js Wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node test/blockchain-spec.js"
+  },
+  "keywords": [
+    "Blockchain",
+    "Bitcoin",
+    "Node.js"
+  ],
+  "author": "rjmacarthy <https://www.cryptogrind.com>",
+  "license": "MIT"
+}
