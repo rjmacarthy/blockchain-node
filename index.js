@@ -11,7 +11,7 @@ var Blockchain = function(config) {
             port: 443,
             user: this.username,
             pass: this.password,
-            walletpassphrase: config.walletphrase,
+            walletpassphrase: config.walletphrase || null,
             ssl: true,
             sslStrict: true
         });
