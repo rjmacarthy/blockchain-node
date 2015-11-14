@@ -1,7 +1,5 @@
 var bitcoin = require('bitcoin');
 
-var client = new bitcoin.Client();
-
 var Blockchain = function(config) {
     if (config && (config.username && config.password)) {
     	this.username = config.username;
