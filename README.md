@@ -24,8 +24,8 @@ API documentation : https://blockchain.info/api/json_rpc_api
 
 ```
 	var bc = new blockchain({
-      username: 'a49adefc-a4dc-42ab-b3dc-68b2fc6fa0f8',
-      password: 'tinkerisnt'
+      username: 'username',
+      password: 'password'
   });
 ```
 

@@ -25,8 +25,8 @@ describe('blockchain instantiation', function() {
 describe('blockchain suite', function() {
 
     var bc = new blockchain({
-        username: 'a49adefc-a4dc-42ab-b3dc-68b2fc6fa0f8',
-        password: 'tinkerisnt'
+        username: 'username',
+        password: 'password'
     });
 
     it('should be able to get info', function(done) {
