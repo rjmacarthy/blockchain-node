@@ -1,10 +1,14 @@
 {
   "name": "blockchain-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Blockchain.info Node.js Wrapper",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node test/blockchain-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjmacarthy/blockchain-node"
   },
   "keywords": [
     "Blockchain",
