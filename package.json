@@ -12,5 +12,8 @@
     "Node.js"
   ],
   "author": "rjmacarthy <https://www.cryptogrind.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bitcoin": "^3.0.1"
+  }
 }
