@@ -49,15 +49,15 @@ API documentation : https://blockchain.info/api/json_rpc_api
 
 getBalance => (confirmations : number, callback : function)
 
-getInfo => (callback : funcion)
+getInfo => (callback : function)
 
-listAccounts => (callback : funcion)
+listAccounts => (callback : function)
 
 getAddressesByAccount => (account : string, callback : function)
 
 listReceivedByAccount => (account : string, callback : function)
 
-listTransactions => (callback : funcion)
+listTransactions => (callback : function)
 
 validateAddress => (address : string, callback : function)
 
@@ -66,6 +66,7 @@ getTransaction => (txid : string, callback : function)
 ** UNTESTED **
 
 sendFrom => (to : string, from : string, amount : number, callback)
+
 move => (to : string, from : string, amount : number, callback)
 
 ## Tests
