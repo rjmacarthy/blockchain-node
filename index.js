@@ -86,7 +86,7 @@ Blockchain.prototype.getAddressesByAccount = function(account, callback) {
 Blockchain.prototype.listReceivedByAccount = function(account, callback) {
     var self = this;
     if (account) {
-        self.client.listReceivedByAccount(function(err, received) {
+        self.client.listReceivedByAccount(account, function(err, received) {
             if (err) {
                 self.HandleError(err, callback);
             } else {
