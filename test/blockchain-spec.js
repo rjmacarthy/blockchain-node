@@ -22,7 +22,7 @@ describe('blockchain instantiation', function() {
 });
 
 
-describe('blockchain suite', function() {
+xdescribe('blockchain suite', function() {
 
     var bc = new blockchain({
         username: 'username',
@@ -61,6 +61,27 @@ describe('blockchain suite', function() {
     it('should be able to validate an address', function(done) {
         bc.validateAddress('13VJhb7gs5LiWmXsDR7ja4i8Bu2Yeoyb4E', function(err, response) {
             expect(response.validation).toBeDefined();
+            done();
+        });
+    });
+
+    it('should be able to get the blockcount', function(done) {
+        bc.getBlockCount(function(err, response) {
+            expect(response.blockcount).toBeDefined();
+            done();
+        });
+    });
+
+    it('should be able to get a blockhash', function(done) {
+        bc.getBlockHash(0, function(err, response) {
+            expect(response.blockhash).toBeDefined();
+            done();
+        });
+    });
+
+    it('should be able to get the difficulty', function(done) {
+        bc.getDifficulty(function(err, response) {
+            expect(response.difficulty).toBeDefined();
             done();
         });
     });

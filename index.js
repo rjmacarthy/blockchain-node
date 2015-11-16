@@ -147,9 +147,49 @@ Blockchain.prototype.getTransaction = function(txid, callback) {
     }
 };
 
+Blockchain.prototype.getBlockCount = function(callback) {
+    var self = this;
+    self.client.getBlockCount(function(err, blockcount) {
+        if (err) {
+            self.HandleError(err, callback);
+        } else {
+            callback(null, {
+                blockcount: blockcount
+            });
+        }
+    });
+};
+
+Blockchain.prototype.getBlockHash = function(index, callback) {
+    var self = this;
+    self.client.getBlockHash(index, function(err, blockhash) {
+        if (err) {
+            self.HandleError(err, callback);
+        } else {
+            callback(null, {
+                blockhash: blockhash
+            });
+        }
+    });
+};
+
+Blockchain.prototype.getDifficulty = function(callback) {
+    var self = this;
+    self.client.getDifficulty(function(err, difficulty) {
+        if (err) {
+            self.HandleError(err, callback);
+        } else {
+            callback(null, {
+                difficulty: difficulty
+            });
+        }
+    });
+};
+
+
 Blockchain.prototype.sendFrom = function(to, from, amount, callback) {
     var self = this;
-    if (to && from && amount) {
+    if ((to && from && amount) && self.walletphrase) {
         self.client.sendFrom(from, to, amount, function(err, txid) {
             if (err) {
                 self.HandleError(err, callback);
@@ -160,13 +200,13 @@ Blockchain.prototype.sendFrom = function(to, from, amount, callback) {
             }
         });
     } else {
-        self.HandleError('Need to, from and amount', callback);
+        self.HandleError('Need to, from and amount and wallet phrase', callback);
     }
 };
 
 Blockchain.prototype.move = function(to, from, amount, callback) {
     var self = this;
-    if (from && to && amount) {
+    if ((to && from && amount) && self.walletphrase) {
         self.client.move(from, to, amount, function(err, txid) {
             if (err) {
                 self.HandleError(err, callback);
@@ -177,8 +217,9 @@ Blockchain.prototype.move = function(to, from, amount, callback) {
             }
         });
     } else {
-        self.HandleError('Need to, from and amount', callback);
+        self.HandleError('Need to, from and amount and wallet phrase', callback);
     }
 };
+
 
 module.exports = Blockchain;

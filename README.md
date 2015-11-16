@@ -63,6 +63,12 @@ validateAddress => (address : string, callback : function)
 
 getTransaction => (txid : string, callback : function)
 
+getBlockCount => (callback : function)
+
+getBlockHash => (index : number, callback : function)
+
+getDifficulty => (callback : function)
+
 **UNTESTED**
 
 sendFrom => (to : string, from : string, amount : number, callback : function)
@@ -84,6 +90,8 @@ Website : www.cryptogrind.com
 ## Release History
 
 * 1.0.0 Initial release
+
+* 1.0.5 New Methods
 
 ## Issues
 
