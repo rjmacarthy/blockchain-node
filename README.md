@@ -47,33 +47,37 @@ API documentation : https://blockchain.info/api/json_rpc_api
 
 ## List of commands
 
-getBalance => (confirmations : number, callback : function)
+```
+getBalance =>             (confirmations : number, callback : function)
 
-getInfo => (callback : function)
+getInfo =>                (callback : function)
 
-listAccounts => (callback : function)
+listAccounts =>           (callback : function)
 
-getAddressesByAccount => (account : string, callback : function)
+getAddressesByAccount =>  (account : string, callback : function)
 
-listReceivedByAccount => (account : string, callback : function)
+listReceivedByAccount =>  (account : string, callback : function)
 
-listTransactions => (callback : function)
+listTransactions =>       (callback : function)
 
-validateAddress => (address : string, callback : function)
+validateAddress =>        (address : string, callback : function)
 
-getTransaction => (txid : string, callback : function)
+getTransaction =>         (txid : string, callback : function)
 
-getBlockCount => (callback : function)
+getBlockCount =>          (callback : function)
 
-getBlockHash => (index : number, callback : function)
+getBlockHash =>           (index : number, callback : function)
 
-getDifficulty => (callback : function)
+getDifficulty =>          (callback : function)
+
 
 **UNTESTED**
 
-sendFrom => (to : string, from : string, amount : number, callback : function)
+sendFrom =>               (to : string, from : string, amount : number, callback : function)
 
-move => (to : string, from : string, amount : number, callback : function)
+move =>                   (to : string, from : string, amount : number, callback : function)
+
+```
 
 ## Tests
 
@@ -93,6 +97,8 @@ Website : www.cryptogrind.com
 
 * 1.0.5 New Methods
 
+* 1.0.6 Some refactoring
+
 ## Issues
 
-Contact me via e-mail
+Add issue on github.

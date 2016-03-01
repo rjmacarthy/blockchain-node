@@ -1,22 +1,14 @@
 var bitcoin = require('bitcoin');
+var client = require ('./client');
 
 var Blockchain = function(config) {
     if (config && (config.username && config.password)) {
     	this.username = config.username;
         this.password = config.password;
-        this.client = new bitcoin.Client({
-            host: 'rpc.blockchain.info',
-            port: 443,
-            user: this.username,
-            pass: this.password,
-            walletpassphrase: config.walletphrase || null,
-            ssl: true,
-            sslStrict: true
-        });
+        this.client = new bitcoin.Client(client(this.username, this.password, config.walletphrase));
     } else {
         throw new Error('Failed to instantiate, config is required');
     }
-
 };
 
 Blockchain.prototype.HandleError = function(err, callback) {

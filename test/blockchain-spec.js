@@ -1,5 +1,6 @@
-var blockchain = require('../index');
-var bitcoin = require('bitcoin');
+var blockchain = require('../index'),
+    bitcoin = require('bitcoin'),
+    harness = require('./harness');
 
 describe('blockchain instantiation', function() {
 
@@ -10,24 +11,17 @@ describe('blockchain instantiation', function() {
     });
 
     it('should be able to instantiate with username and password', function() {
-        var bc = new blockchain({
-            username: 'username',
-            password: 'password'
-        });
+        var bc = harness.bc;
         expect(bc).toBeDefined();
-        expect(bc.username).toBe('username');
-        expect(bc.password).toBe('password');
+        expect(bc.username).toBe('d7ca8995-6613-4ab6-83c4-ac32133c4963');
+        expect(bc.password).toBe('password123');
     });
 
 });
 
 
-xdescribe('blockchain suite', function() {
-
-    var bc = new blockchain({
-        username: 'username',
-        password: 'password'
-    });
+describe('blockchain suite', function() {
+    var bc = harness.bc;
 
     it('should be able to get info', function(done) {
         bc.getInfo(function(err, response) {
